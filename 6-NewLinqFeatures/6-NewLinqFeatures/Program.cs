@@ -46,6 +46,8 @@ i2.ToConsole();
 
 
 
+var j = source.SingleOrDefault(x => x == 5, defaultValue: -1);
+
 
 
 
@@ -77,7 +79,7 @@ Console.WriteLine(people.MinBy(x => x.Age));
 
 
 
-var buffer = people.TryGetNonEnumeratedCount(out int count) 
+var buffer = people.TryGetNonEnumeratedCount(out int count)
                 ? new List<Person>(capacity: count) : new List<Person>();
 
 foreach (var item in people)
